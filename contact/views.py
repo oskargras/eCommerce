@@ -10,7 +10,7 @@ def contact(request):
         name = form.cleaned_data['name']
         comment = form.cleaned_data['comment']
         subject = 'Message from MYSITE.com'
-        message = '{}{}'.format(comment, name)
+        message = '{} {}'.format(comment, name)
         emailFrom = form.cleaned_data['email']
         emailTo = [settings.EMAIL_HOST_USER]
         send_mail(subject, message, emailFrom, emailTo, fail_silently=True)
