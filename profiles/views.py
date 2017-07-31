@@ -5,10 +5,10 @@ from django.shortcuts import render
 
 
 def home(request):
-    ctx = locals()
+    ctx = {}
     return render(request, 'home.html', ctx)
 
 
 def about(request):
-    ctx = locals()
+    ctx = {}
     return render(request, 'about.html', ctx)
