@@ -145,7 +145,7 @@ if DEBUG:
     )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-  
+
 SITE_ID = 1
 
 LOGIN_URL = '/accounts/login/'
