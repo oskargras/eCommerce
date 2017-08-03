@@ -2,7 +2,7 @@
 
 {% block script %}
 <script type="text/javascript">
-    Stripe.setPublishableKey('pk_test_Bi713vMi3bia88gJD2b3tdDp');
+    Stripe.setPublishableKey('{{ publishKey }}');
     function stripeResponseHandler(status, response) {
 
   // Grab the form:
@@ -40,12 +40,14 @@ $(function() {
         $form.find('.submit').prop('disabled', true);
 
         // Request a token from Stripe:
-        Stipe.card.createToken($form, stripeResponseHandler);
+        Stripe.card.createToken($form, stripeResponseHandler);
 
         // Prevent the form from being submitted:
         return false;
     });
 });
+
+
 {% endblock %}
 
 {% block content %}
